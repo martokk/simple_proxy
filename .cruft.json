@@ -1,0 +1,31 @@
+{
+  "template": "/home/martokk/dev/templates/cookiecutter/cookiecutter_python",
+  "commit": "eb179bdf4ef13ad54960256e48e518b7bbfc6ea4",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "simple_proxy",
+      "project_description": "A python project created by Martokk.",
+      "organization": "v3services",
+      "license": "MIT",
+      "_all_python_minor_version": [
+        10
+      ],
+      "minimal_python_version": "3.10",
+      "github_name": "martokk",
+      "email": "25113632+martokk@users.noreply.github.com",
+      "version": "0.0.1",
+      "line_length": "100",
+      "create_container_docker_templates": "yes",
+      "create_cli_typer_templates": "yes",
+      "create_db_sqlmodel_templates": "no",
+      "create_server_fastapi_templates": "no",
+      "fastapi_sqlmodel_template_model_name": "user",
+      "_copy_without_render": [
+        "poetry.lock"
+      ],
+      "_template": "/home/martokk/dev/templates/cookiecutter/cookiecutter_python"
+    }
+  },
+  "directory": null
+}

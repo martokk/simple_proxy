@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  simple_proxy:
+    container_name: "simple_proxy"
+    image: "simple_proxy"
+    build:
+      context: .
+      # context: https://github.com/martokk/simple_proxy.git#main
+      target: production
+    restart: unless-stopped
+    # depends_on:
+    #   - duckdns
+    env_file:
+      # - /home/ubuntu/volumes/simple_proxy/.env
+      - ./simple_proxy/.env
+    volumes:
+      # - /home/ubuntu/volumes/simple_proxy/.env:/workspace/.env
+      # - /home/ubuntu/volumes/simple_proxy/media:/workspace/media
+      # - /home/ubuntu/volumes/simple_proxy/logs:/workspace/logs
+      # - /home/ubuntu/volumes/simple_proxy/db.sqlite3:/workspace/db.sqlite3
+      - ./simple_proxy:/simple_proxy
+    ports:
+      - "5000:5000"
