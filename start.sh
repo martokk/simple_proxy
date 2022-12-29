@@ -1,3 +1,3 @@
 #!/bin/sh
 
-python simple_proxy
+python -m simple_proxy

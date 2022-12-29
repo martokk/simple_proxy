@@ -53,7 +53,7 @@ RUN poetry install
 WORKDIR /simple_proxy
 COPY . .
 
-EXPOSE 5000
+EXPOSE 7070
 ENTRYPOINT ["/bin/sh", "-c", "./start.sh"]
 
 
@@ -82,6 +82,7 @@ ADD /simple_proxy /simple_proxy
 ADD /start.sh /start.sh
 RUN chmod +x /start.sh
 
-EXPOSE 5000
+WORKDIR /
+EXPOSE 7070
 ENTRYPOINT ["/bin/sh", "-c", "./start.sh"]
 
