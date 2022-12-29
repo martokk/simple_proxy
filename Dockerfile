@@ -81,7 +81,6 @@ COPY --from=builder-base $VENV_PATH $VENV_PATH
 ADD /simple_proxy /simple_proxy
 ADD /start.sh /start.sh
 RUN chmod +x /start.sh
-WORKDIR /simple_proxy
 
 EXPOSE 5000
 ENTRYPOINT ["/bin/sh", "-c", "./start.sh"]
