@@ -16,6 +16,6 @@ class MyProxy(SimpleHTTPRequestHandler):
 
 
 def start_server():
-    httpd = socketserver.ForkingTCPServer(("localhost", PORT), MyProxy)
+    httpd = socketserver.ForkingTCPServer(("0.0.0.0", PORT), MyProxy)
     print("Listening...")
     httpd.serve_forever()
